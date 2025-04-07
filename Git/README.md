@@ -310,6 +310,10 @@ Documentação Em PT feita pelo Medium: https://medium.com/linkapi-solutions/con
 
 #### Quais são os tipos de commit
 
+Na sua mensagem do commit seguimos o seguinte modelo:
+
+> git commit -m "type(nome_do_arquivo): mensagem_do_commit"
+
 O type é responsável por nos dizer qual o tipo de alteração ou iteração está sendo feita, das regras da convenção, temos os seguintes tipos:
 
 - test: indica qualquer tipo de criação ou alteração de códigos de teste. Exemplo: Criação de testes unitários.
@@ -348,3 +352,11 @@ Exemplo: Circle, Travis, BrowserStack, etc.
 - Caso esteja indeciso sobre qual type usar, provavelmente trata-se de uma grande mudança e é possível separar esse commit em dois ou mais commits;
 
 - A diferença entre build e chore pode ser um tanto quanto sutil e pode gerar confusão, por isso devemos ficar atentos quanto ao tipo correto. No caso do Node.js por exemplo, podemos pensar que quando há uma adição/alteração de certa dependência de desenvolvimento presente em devDependencies, utilizamos o chore. Já para alterações/adições de dependências comuns aos projeto, e que haja impacto direto e real sobre o sistema, utilizamos o build.
+
+#### Na prática
+
+Como mencionado no início, seguimos um, então demonstrando alguns exemplos práticos, fica assim:
+
+> git commit -m "feat(TestController): criando a rota hello world"
+
+> git commit -m "fix(TestController): corrigindo parâmetro da rota hello world"
